@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Form</title>
+</head>
+<body>
+    <main>  
+        <section>  
+            <form action="POST">
+                <fieldset>
+                    <legend>User Information:</legend>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Username"><br>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password"><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Personal Information:</legend>
+                    <label for="first-name">First name:</label><br>
+                    <input type="text" id="first-name" name="first-name"><br>
+
+                    <label for="last-name">Last name:</label><br>
+                    <input type="text" id="last-name" name="last-name"><br>
+
+                    <input type="radio" id="male" name="gender" value="male" checked="checked">
+                    <label for="male">Male</label><br>
+
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+
+                    <label for="fav-food">Favorite Food</label>
+                    <select name="fav-food" id="fav-food">
+                        <option value="chocolate">Chocolate</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="spaghetti">Spaghetti</option>
+                        <option value="soup">Soup</option>
+                    </select> <br>
+                </fieldset>
+                
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">        
+            </form>
+        </section>
+    </main>
+</body>
+<style>
+    fieldset{
+        margin: 1rem 1rem 1rem 0;
+    }
+</style>
+</html>
