@@ -1,0 +1,28 @@
+
+#red {
+    position: absolute;
+    margin: 300px 0 0 400px;
+    z-index: 10;
+}
+
+#silver {
+    position: absolute;
+    margin: 350px 0 0 450px;
+}
+
+#green {
+    position: sticky;
+    top: 100px;
+    left: 100%;
+}
+
+#blue {
+    position: relative;
+}
+
+#yellow {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
