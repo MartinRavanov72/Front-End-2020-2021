@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6.Table</title>
+</head>
+<body>
+    <main></main>
+</body>
+</html>
+<script>
+    var table = document.createElement("table");
+    table.style.width = 100;
+    table.style.border = "1px solid black";
+    table.classList.add("first");
+
+    var caption = document.createElement("caption");
+    caption.textContent = "Table caption";
+
+    table.appendChild(caption);
+
+    var tr = document.createElement("tr");
+
+    var th = document.createElement("th");
+    th.textContent = "Evidence Rating";
+    tr.appendChild(th);
+
+    th = document.createElement("th");
+    th.textContent = "Effect";
+    tr.appendChild(th);
+    
+    th = document.createElement("th");
+    th.textContent = "Efficacy";
+    tr.appendChild(th);
+
+    th = document.createElement("th");
+    th.textContent = "Consensus";
+    tr.appendChild(th);
+
+    th = document.createElement("th");
+    th.textContent = "Comments";
+    tr.appendChild(th);
+
+    table.appendChild(tr);
+
+    var tr1 = document.createElement("tr");
+
+    var td = document.createElement("td");
+    td.textContent = "A";
+    tr1.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "Power Output";
+    tr1.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "3 Stars";
+    tr1.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "80% 18 studies";
+    tr1.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "asdasdasdasdasd";
+    tr1.appendChild(td);
+
+    table.appendChild(tr1);
+
+    var tr2 = document.createElement("tr");
+
+    td = document.createElement("td");
+    td.textContent = "B";
+    tr2.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "Weight";
+    tr2.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "4 Stars";
+    tr2.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "100% 65 studies";
+    tr2.appendChild(td);
+
+    td = document.createElement("td");
+    td.textContent = "asdasdasdasdasdasdasdasd";
+    tr2.appendChild(td);
+
+    table.appendChild(tr2);
+
+    var main = document.getElementsByTagName("main")[0];
+    main.appendChild(table);
+
+    var thElements = document.getElementsByTagName("th");
+    var tdElements = document.getElementsByTagName("td");
+
+    for (let el of thElements){
+		el.style.border = "1px solid black";
+	}
+
+	for (let el of tdElements){
+		el.style.border = "1px solid black";
+    }
+
+    var btn = document.createElement("BUTTON");
+    btn.textContent = "Change row order";
+    btn.addEventListener("click", function() {
+        if(table.classList.contains("first")){
+            table.classList.remove("first");
+            table.classList.add("second");
+
+            tr1.remove();
+            table.appendChild(tr1);
+        } else{
+            table.classList.remove("second");
+            table.classList.add("first");
+
+            tr2.remove();
+            table.appendChild(tr2);
+        }
+    });
+
+    main.appendChild(btn);
+</script>
