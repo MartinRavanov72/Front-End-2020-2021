@@ -1,0 +1,257 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    color: rgb(46, 46, 46);
+    font-family: Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 16px;
+    background-image: linear-gradient(-100deg, #A2F2F1 0%, #B19AFE 100%);
+    height: 100vh;
+}
+
+/* header */
+
+header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 0 3rem;
+    height: 3.3rem;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 20;
+    margin-right: 0.1rem;
+}
+
+#search{
+    height: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;;
+    border: 1px solid rgb(233, 233, 233);
+    width: 15rem;
+    background-color: rgb(246, 247, 253);
+}
+
+#search:focus{
+    outline: none;
+}
+
+header i {
+    position: absolute;
+    z-index: 100;
+    top: 1.1rem;
+    right: 4rem;
+}
+
+/* main */
+
+main {
+    padding-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* profile */
+
+.profile-container {
+    background: white;
+    max-width: 18rem;
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.profile-container>p{
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.profile-container img{
+    margin-top: 0.5rem;
+    height: 5.25rem;
+    width: 5.25rem;
+    border-radius: 50%;
+}   
+
+/* profile stats */
+
+.profile-stats-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 3.75rem;
+    background: rgb(246, 247, 253);
+    align-items: center;
+}
+
+.profile-stats-container input {
+    background: rgb(246, 247, 253);
+    border: 1px solid rgb(98, 189, 214);
+    color: rgb(98, 189, 214);
+    border-radius: 1rem;
+    height: 2rem;
+    width: 4.2rem;
+    font-weight: 700;
+}
+
+/* posts and reactions stats */
+
+.posts-reactions-stats-container {
+    display: flex;
+    padding-right: 4rem;
+}
+
+.posts-reactions-stats-container div {
+    padding-right: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.posts-stats-container p:nth-child(2),
+.reactions-stats-container p:nth-child(2) {
+    color: rgb(98, 189, 214);
+    font-size: 1.125rem;
+}
+
+.posts-stats-container p:nth-child(1),
+.reactions-stats-container p:nth-child(1) {
+    color: #848694;
+    font-size: 0.75rem;
+}
+
+/*write post */
+
+.write-post-container{
+    display: flex;
+    position: relative;
+    padding: 0.5rem 1.5rem;
+    background: rgb(245, 252, 253);
+    height: 3rem;
+}
+
+.write-post-container i{
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    color: rgb(125, 199, 220);
+}
+
+.write-post-container input {
+    width: 100%;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 1rem;
+    padding: 0.5rem 0.9rem;
+    height: 2rem;
+    background: white;
+}
+
+.write-post-container input:focus{
+    outline: none;
+}
+
+.write-post-container input::placeholder {
+    color: rgb(125, 199, 220);
+    opacity: 1;
+}
+
+.write-post-container input:-ms-input-placeholder {
+    color: rgb(125, 199, 220);
+}
+
+.write-post-container input::-ms-input-placeholder {
+    color: rgb(125, 199, 220);
+}
+
+.write-post-container img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin: 0 1.1rem 0 0.22rem;
+}
+
+/* posts */
+
+.posts-container {
+    background: white;
+    max-width: 55rem;
+}
+
+.post{
+    display: flex;
+    padding: 1rem 1.5rem;
+    min-height: 7rem;
+    position: relative;
+}
+
+.post img{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+.post-content span:first-child{
+    font-weight: 800;
+    margin-right: 0.3rem;
+}
+
+.post-content p {
+    padding-bottom: 1rem;
+    font-size: 0.875rem;
+}
+
+i.fas.fa-times {
+    position: absolute;
+    top: 1.3rem;
+    right: 1.2rem;
+}
+
+i.fas.fa-circle.fa-xs,
+.post-content span:nth-child(3),
+i.fas.fa-times {
+    color: #848694;
+}
+
+i.fas.fa-circle.fa-xs{
+    vertical-align: middle;
+    font-size: .3em;
+}
+
+.likes-dislikes {
+    padding-right: 3.2rem;
+}
+
+/* bottom border */
+
+.bottom-border{
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+/* responsive  */
+
+@media screen and (max-width: 890px) {
+    main {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .profile-container { 
+        max-width: 100%;
+        margin-right: 0;
+    }
+}
